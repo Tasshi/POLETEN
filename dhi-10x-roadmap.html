@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10X Journey – DHI Group Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@500;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f2ea;--card:#fff;--ink:#1d2733;--mute:#5b6673;--blue:#2d64a0;--cyan:#1b9fd0;--coral:#e0553b;--teal:#4a8f9d;--gold:#c9a227;--line:#ddd6c8}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#10161d;--card:#18212b;--ink:#e8ecef;--mute:#9aa6b2;--blue:#6aa6e0;--cyan:#4cc3ef;--coral:#f27a62;--teal:#7bbfcc;--line:#2a3541}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:300 17px/1.65 Roboto,system-ui,sans-serif}
+h1,h2,h3{font-family:Alegreya,Georgia,serif;line-height:1.1;margin:0 0 .5em}
+h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;color:var(--blue)}
+h3{font-size:1.35rem;font-weight:800;color:var(--accent,var(--blue));margin-top:1.6em}
+p{margin:0 0 1em}
+b,strong{font-weight:700}
+nav{position:sticky;top:0;z-index:10;background:var(--blue);display:flex;gap:2px;overflow-x:auto;padding:0 12px;padding-top:env(safe-area-inset-top,0)}
+nav a{color:#fff;text-decoration:none;font:400 13px Roboto,sans-serif;padding:14px 12px;white-space:nowrap;opacity:.75}
+nav a.on,nav a:hover{opacity:1;box-shadow:inset 0 -3px #f4793a}
+.hero{background:var(--blue);color:#f6f2ea;padding:12vh 24px 10vh;text-align:center}
+.hero h1{font-size:clamp(3.5rem,14vw,9rem);font-weight:800;margin:0}
+.hero h1 small{display:block;font-size:.28em;color:#f4793a;font-weight:500;letter-spacing:.04em}
+.hero p{max-width:30em;margin:1em auto 0;font-size:1.1rem;opacity:.9}
+.stripes{height:14px;background:linear-gradient(90deg,#2f2d7e 0 20%,#1b9fd0 20% 40%,#4a8f9d 40% 60%,#f4793a 60% 80%,#f9c31f 80%)}
+section{padding:72px 24px;border-bottom:1px solid var(--line)}
+.w{max-width:960px;margin:auto}
+.lead{font-size:1.25rem;font-family:Alegreya,serif;font-weight:500;color:var(--mute)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:1.2em 0}
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--accent,var(--blue));border-radius:6px;padding:18px 20px}
+.card h4{margin:0 0 6px;font:700 1rem Roboto;color:var(--accent,var(--blue))}
+.card p{margin:0;font-size:.95rem}
+.stats{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin:1.5em 0}
+.stat{text-align:center;padding:18px;background:var(--blue);color:#fff;border-radius:6px}
+.stat b{display:block;font:800 2rem Alegreya,serif;color:#f9c31f}
+.stat span{font-size:.85rem}
+blockquote{margin:1.5em 0;padding:8px 0 8px 20px;border-left:4px solid #f4793a;font:italic 500 1.2rem/1.5 Alegreya,serif}
+blockquote cite{display:block;font:300 .85rem Roboto;color:var(--mute);margin-top:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 16px}
+.chips span{background:var(--card);border:1px solid var(--line);border-radius:99px;padding:3px 12px;font-size:.85rem}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.92rem;background:var(--card)}
+th{background:var(--accent,var(--blue));color:#fff;text-align:left;padding:9px 12px;font-weight:700}
+td{padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+td:last-child{white-space:nowrap;color:var(--mute)}
+ul{padding-left:1.2em}li{margin:.3em 0}
+.p1{--accent:var(--cyan)}.p2{--accent:var(--blue)}.p3{--accent:var(--coral)}.en{--accent:var(--teal)}
+.p1 h2{color:var(--cyan)}.p3 h2{color:var(--coral)}.en h2{color:var(--teal)}
+.q{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.q{grid-template-columns:1fr}}
+footer{padding:40px 24px;text-align:center;color:var(--mute);font-size:.85rem}
+h4{font:700 1.05rem Roboto;color:var(--accent,var(--blue));margin:1.4em 0 .3em}
+</style>
+</head>
+<body>
+<nav id="nav">
+<a href="#top">Cover</a><a href="#intro">Overview</a><a href="#fulltext">Full Text</a><a href="#vision">Vision</a><a href="#strategy">Strategy</a><a href="#p1">Portfolio</a><a href="#p2">Investment</a><a href="#p3">Innovation</a><a href="#enablers">Enablers</a><a href="#coe">CoEs</a><a href="#reforms">Reforms</a><a href="#risk">Risks</a><a href="#2035">2035</a>
+</nav>
+
+<header class="hero" id="top">
+<h1>10X<small>DHI Group Roadmap</small>JOURNEY</h1>
+<p>Envisioning the future with a growth mindset</p>
+</header>
+<div class="stripes"></div>
+
+<section id="intro"><div class="w">
+<blockquote>“The primary purpose of Druk Holding and Investments Limited (DHI) shall be to ensure that its companies are able to meet the challenges and requirements of the corporate sector in a highly competitive global economy, such that DHI creates and maximizes returns to its shareholders, the people of Bhutan.”<cite>Royal Charter, 11 November 2007</cite></blockquote>
+
+<h2>Foreword &amp; Executive Summary</h2>
+<p class="lead">The 10X Roadmap is not simply a corporate strategy but a national undertaking: transformation with discipline, growth with purpose, wealth with wisdom. — Dasho Karma Yezer Raydi, Chairman</p>
+<p>DHI and its Group commit to growing tenfold over the next decade, inspired by the Gelephu Mindfulness City (GMC) and aligned with the Government’s 21st Century Economic Roadmap. DHI has historically contributed around 30% to GDP and 40% of the government’s internal revenue. The Roadmap moves DHI from steward of national assets to strategic architect of Bhutan’s future economy. — Ujjwal Deep Dahal, CEO</p>
+<div class="stats">
+<div class="stat"><b>Nu. 700 bn</b><span>Revenue base by 2035</span></div>
+<div class="stat"><b>Nu. 30 bn</b><span>Bhutan Future Fund</span></div>
+<div class="stat"><b>USD 40 bn+</b><span>Investment horizon</span></div>
+<div class="stat"><b>20 GW</b><span>Renewable goal (15 hydro + 5 solar)</span></div>
+</div>
+<h3>Three strategic imperatives</h3>
+<div class="grid">
+<div class="card"><h4>Catalyst for growth</h4><p>Support key national projects including GMC and unlock new engines of growth in the private sector.</p></div>
+<div class="card"><h4>Future industries</h4><p>Invest in and co-create next-generation industries with national and international partners.</p></div>
+<div class="card"><h4>Infrastructure &amp; innovation</h4><p>Physical, digital and financial infrastructure as the bedrock for industry, R&amp;D and entrepreneurship.</p></div>
+</div>
+<h3>Context</h3>
+<p><b>Gelephu Mindfulness City</b> is a Special Administrative Region in southern Bhutan, envisioned as a hub for mindful living, innovation and value-based enterprise. Clusters: green energy and tech, AgriTech and forestry, aviation and logistics, finance and digital assets, tourism, spirituality, health and wellness.</p>
+<p><b>21st Century Economic Roadmap</b> (launched 21 Feb 2025) targets a high-income, innovation-led economy by 2050, built on five ambitions: developed economy, robust and diversified economy, global leader in priority sectors, knowledge and innovation-driven economy, and environmental stewardship.</p>
+</div></section>
+
+<section id="fulltext"><div class="w">
+<h2>Foreword</h2>
+<p>In every nation’s journey, there are moments that call for vision—vision rooted in values, yet bold enough to shape a new future. For Bhutan, this moment is now.</p>
+<p>As we look ahead to 2035 and beyond, Bhutan must redefine the way it builds prosperity, safeguards sovereignty, and serves its people. In this spirit, Druk Holding and Investments Limited (DHI) has crafted the 10X Roadmap, not simply as a corporate strategy, but as a national undertaking. A commitment to deliver transformation with discipline, growth with purpose, and wealth with wisdom.</p>
+<p>Our mandate, as enshrined in the Royal Charter, is clear: to be custodians of the people’s assets and stewards of their future. In the past, this meant securing national revenue largely from the energy and resource segment. In the decade ahead, it means something more. It means investing in innovation, empowering human capital, diversifying our economy, and becoming an institution that leads by example.</p>
+<p>This Roadmap is the result of deep reflection, strategic clarity, and shared aspiration. It charts the course for how DHI and its companies will unlock value, enhance performance, and remain aligned with Bhutan’s unique development philosophy. It also speaks to the world, to those who seek to partner with a nation that values integrity, sustainability, and long-term thinking.</p>
+<p>But more than anything, this document is a call to service. It invites every colleague within the DHI Group, every partner in government, and every citizen of Bhutan to walk together - to build institutions that last, industries that uplift, and legacies that endure.</p>
+<p>On behalf of the Board of Directors, I commend this 10X Roadmap to all its readers. May it serve not only as a plan, but as a promise. A promise to do justice to our responsibilities, and to our future.</p>
+<p><b>Let us rise to the challenge. And let us do so, together.</b><br><i>Dasho Karma Yezer Raydi, Chairman, DHI</i></p>
+
+<h2 style="margin-top:1.4em">Message from the CEO</h2>
+<p><b>DHI and its Group are embarking on a bold decade of transformative change.</b> At DHI, we stand at the threshold of a historic opportunity, one that demands not incremental change, but bold, exponential transformation. The 10X Roadmap is DHI and its Group’s ambitious commitment to grow tenfold over the next decade, inspired by the Gelephu Mindfulness City (GMC) initiative and aligned with the Government’s 21st Century Economic Roadmap. This journey is not about doing more of the same. It’s about reimagining everything — from how we raise and allocate capital, and invest in Bhutan and abroad, to how we foster innovation, build infrastructure, develop talent, and create lasting value for generations to come.</p>
+<p><b>From stewardship to strategic acceleration.</b> As Bhutan’s sovereign investment arm, DHI has historically contributed around 30% to GDP and 40% of the government’s internal revenue. But our ambition must go further. The 10X Roadmap redefines our role, from steward of national assets to strategic architect of Bhutan’s future economy. Through a bold investment roadmap, we are catalyzing next-generation industries in green energy, manufacturing, services, mines and minerals, infrastructure, exploring deep tech, R&amp;D, innovation economy, and exploring global capital markets. At DHI, we are charting a bold investment horizon of over USD 40 billion in the coming decade—led by hydropower, solar, and frontier sectors. We welcome global and local partners to co-create industries rooted in purpose, progress, and values.</p>
+<p><b>Executing with intent, scaling with discipline.</b> This strategy is underpinned by three core pillars of growth: Portfolio Management Strategy, Investment Strategy, and Innovation Strategy and supported by three strategic enablers: Financing, Technology, and Human Capital. We are institutionalizing excellence through Centers of Excellence in Environmental, Social and Governance (ESG), R&amp;D, Project Management (PM), and Monitoring &amp; Evaluation (M&amp;E). Each pillar is action-oriented, timeline-bound, and designed for impact. DHI’s portfolio companies will now reimagine their Corporate Strategic Plans (CSPs) based on their core business strengths, while embracing diversification to remain resilient and relevant in a rapidly evolving future — all in alignment with the 10X Journey.</p>
+<p><b>Why now? Because the future won’t wait.</b> The world is shifting rapidly: geopolitically, technologically, and climatically. We look forward to partnering with global strategic stakeholders, learning and supporting, and investing not just to keep pace with the future, but to shape it. This is our moment to build the Bhutan of 2035: high-income, digitally integrated, economically sovereign, and globally relevant.</p>
+<p><b>Join the 10X movement.</b> The 10X Roadmap is a call for all of us to build a movement where we collaborate among Governments, Academia, Industry and Communities locally and globally. We seek innovative minds and long-term partnerships to co-create a creative economy that is meaningful for the future and empowers the next generation. Let us move forward with urgency, guided by national values and ambition for impact in pursuit of DHI’s 10X Roadmap.</p>
+<p><i>Ujjwal Deep Dahal, CEO, DHI</i></p>
+
+<h2 style="margin-top:1.4em">Executive Summary</h2>
+<p>As Bhutan stands on the cusp of a profound economic transformation, we at DHI are called to lead with clarity, courage, and conviction. The 10X Roadmap is our response to this national movement. It is not merely a corporate plan, it is a strategic blueprint to reimagine what DHI and the Group, and indeed Bhutan, can become over the next decade.</p>
+<p>The challenges ahead are undeniable but it is within them that we uncover our greatest opportunities. The world is entering an era defined by exponential technological advancements, intensifying competition for resources, volatile global markets and shifting geopolitical and economic power dynamics. While our economy has long been anchored by agriculture, tourism, and hydropower and it is vital to continue nurturing these sectors, we must urgently diversify beyond hydropower. To remain competitive and resilient, Bhutan must deepen its human capital, embrace innovation, and build new capabilities to create and lead in emerging industries. This transformation requires our institutions to evolve, preserve the integrity of our national values while acquiring the agility, foresight, and executional excellence demanded by a rapidly changing global landscape.</p>
+<p>The 10X Roadmap centers on building a robust and diversified economy through a dynamic portfolio strategy targeting five key sectors: Energy and Resources, Manufacturing and Services, Infrastructure, Mines and Minerals, and Global Securities. A key pillar of this vision is establishing a research-driven manufacturing ecosystem through the DHI InnoTech and the Jigme Namgyel Wangchuck Super Fab Lab (JNWSFL), emphasizing low-volume, high-value production.</p>
+<p>To unlock private sector growth, DHI will invest in emerging industries and innovation, backed by a Multichannel Innovation Fund (MCIF) and strategic Foreign Direct Investment (FDI) partnerships. In the energy domain, DHI with support of the Government leads Bhutan’s goal of a 20 GW renewable portfolio while investing in future energy technologies. It also seeks to leverage Bhutan’s green energy and hydropower potential to drive an AI and Energy Economy, in partnership with GMC and GovTech.</p>
+<p>DHI will scale its impact globally through its international subsidiaries, potentially forming strategic market linkages for Bhutanese products. At the national level, DHI is committed to fostering an innovation ecosystem by improving access to capital, shaping enabling policies, and supporting entrepreneurial growth across all stages of the innovation cycle.</p>
+<h3>Building institutions for the long term</h3>
+<p>The Roadmap is accompanied by major institutional reforms that re-architect DHI for high performance. We have introduced a professional C-suite structure, including a Chief Investment Officer, Chief Operating Officer, Chief Financial Officer, and Chief Technology Officer supported by a matrix governance system that decentralizes delivery while maintaining strategic alignment. We have also introduced the Y-Career Model, allowing high-potential talent to grow as either managers or specialists, without being forced into one-size career ladders. To institutionalize excellence, we are establishing CoEs in Project Management, ESG, R&amp;D, and M&amp;E.</p>
+<h3>Risk, reality, and readiness</h3>
+<p>We are clear about the risks and challenges ahead and the opportunities it provides for DHI and Bhutan at large. Overdependence on hydropower, fragility in the mining sector, weak innovation ecosystems, and talent shortages are real constraints. Global turbulence from climate volatility to digital disruption further compounds these risks. The 10X Roadmap embeds a Strategic Risk Management Framework, a transparent Monitoring &amp; Evaluation system, and adaptive governance protocols. We are building institutions that are not only high-performing, but also resilient, ethical, and future-proof.</p>
+<h3>Destination 2035: a transformed Bhutan</h3>
+<p>By 2035, DHI’s 10X Roadmap envisions a transformed economic landscape, anchored in a Nu. 700 billion revenue base and the Nu. 30 Billion in the Bhutan Future Fund (BFF). Through strategic investments, DHI will have built globally competitive sectors, created meaningful investments and jobs, and nurtured a vibrant startup ecosystem. Agile governance and efficient portfolio management will align the DHI Group with global standards. More than growth, the 10X Roadmap represents a legacy of economic resilience, institutional confidence, and Bhutan’s emergence as a forward-looking, innovation-driven nation.</p>
+</div></section>
+
+<section id="vision"><div class="w">
+<h2>Envisioning DHI</h2>
+<div class="grid">
+<div class="card"><h4>Vision</h4><p>To be the leading wealth management and creation organization that helps transform Bhutan into a globally competitive economy guided by the principles of GNH.</p></div>
+<div class="card"><h4>Mission</h4><p>To safeguard and enhance national wealth for all generations of Bhutanese through prudent investments.</p></div>
+</div>
+<h3>Promise to the people of Bhutan</h3>
+<ul>
+<li>Protect and grow national wealth with prudence, transparency and a long-term view.</li>
+<li>Align strategies with fiscal resilience, diversification and inclusive prosperity.</li>
+<li>Invest in skilled, ethical, future-ready Bhutanese talent.</li>
+<li>Embrace innovation and frontier technologies.</li>
+<li>Strengthen the Bhutan Future Fund for financial sovereignty and intergenerational equity.</li>
+</ul>
+<h3>Values</h3>
+<div class="chips"><span>Integrity</span><span>Honesty</span><span>Excellence</span><span>Prudence</span><span>Teamwork</span><span>Accountability</span></div>
+<h3>Behavioural principles</h3>
+<div class="chips"><span>Teamship &amp; Co-Elevation</span><span>Innovation</span><span>Boldness &amp; Growth Mindset</span><span>Coaching &amp; Collaboration</span><span>Agility &amp; Focus</span><span>Ownership &amp; Transparency</span></div>
+</div></section>
+
+<section id="strategy"><div class="w">
+<h2>The DHI Strategy</h2>
+<p class="lead">Building the architecture for Bhutan’s 10X future.</p>
+<div class="grid">
+<div class="card p1"><h4>Pillar I · Portfolio Management</h4><p>Diversification, governance, capital allocation and performance systems across group companies.</p></div>
+<div class="card p2"><h4>Pillar II · Investment</h4><p>Growth across Energy, Mines, Infrastructure, Manufacturing &amp; Services, and Global Securities.</p></div>
+<div class="card p3"><h4>Pillar III · Innovation</h4><p>Science, technology and entrepreneurship as a pillar of Bhutan’s economy.</p></div>
+</div>
+<div class="grid">
+<div class="card en"><h4>Enabler · Financing</h4><p>Long-term capital via diverse instruments and global markets.</p></div>
+<div class="card en"><h4>Enabler · Technology</h4><p>Digital transformation, shared platforms, foresight.</p></div>
+<div class="card en"><h4>Enabler · Human Capital</h4><p>Leadership, talent and values-based workplaces.</p></div>
+</div>
+<p>Supported by four Centres of Excellence: Project Management, ESG, Monitoring &amp; Evaluation, and Research &amp; Development.</p>
+</div></section>
+
+<section id="p1" class="p1"><div class="w">
+<h2>Pillar I: Portfolio Management Strategy</h2>
+<p class="lead">Optimizing national assets for sustainable growth and long-term resilience.</p>
+<p>DHI stewards 25 portfolio companies that contribute close to 40% of government domestic revenue and nearly 30% of GDP.</p>
+<h3>Four strategic quadrants</h3>
+<div class="q">
+<div class="card"><h4>Potential</h4><p>High-growth, innovation-sensitive companies needing investment and agility.<br><b>BTL, TTPL, BoB</b></p></div>
+<div class="card"><h4>Strategic</h4><p>Mature, nationally essential companies needing restructuring.<br><b>SMCL, DACL, DGPC, BPC, BNDIL</b></p></div>
+<div class="card"><h4>Future</h4><p>Sectors to be explored with global partners: energy and resources, mines and minerals, infrastructure, services and manufacturing, global securities.</p></div>
+<div class="card"><h4>Growth</h4><p>Scalable businesses needing study for investment or divestment, overhaul and cost optimization.<br><b>KIL, DPL, CDCL, NRDCL, BBPL, BNB, CHL, DHI PTE, ABHL, STCBL, DCCL, PCAL, MSPCL, RICBL, BFAL, DHIL, DML</b></p></div>
+</div>
+<h3>Seven strategic focus areas</h3>
+<h4>1. Strengthening corporate governance and accountability</h4>
+<p>Robust governance is the cornerstone of long-term value creation. DHI is committed to upholding the highest standards of corporate governance across its portfolio. This includes enhancing the capacity and effectiveness of subsidiary boards, instituting clear governance frameworks, and promoting strategic autonomy balanced by transparent oversight. Through structured performance compacts and regular strategic reviews, DHI ensures that each company is evaluated not only on financial outcomes, but also on strategic alignment, innovation capacity, and national contribution.</p>
+<h4>2. Driving operational efficiency across the portfolio</h4>
+<p>Operational efficiency is a strategic necessity. DHI will promote group-wide operational improvements through systems integration, lean process redesign, and shared services in core functions such as finance, human resources, procurement, and digital infrastructure. These efforts are designed to eliminate redundancies, reduce costs, and improve service delivery across the board. Efficiency gains will be reinvested into innovation, talent development, and customer excellence.</p>
+<h4>3. Enhancing capital allocation and financial efficiency</h4>
+<p>Resources will be channeled towards companies and sectors that demonstrate long-term growth potential, strategic relevance, and alignment with national priorities. This logic will prioritize entities in the Potential, Growth, and Future Zones, guided by criteria such as return on investment, capital productivity, and national economic contribution. DHI will also pursue strategic divestments from non-core, underperforming, or legacy assets. These are deliberate reallocations of national capital, from static holdings to dynamic opportunities, with proceeds reinvested in digital infrastructure, frontier industries, and knowledge-based enterprises.</p>
+<h4>4. Institutionalizing enterprise risk management and resilience planning</h4>
+<p>DHI will reinforce and institutionalize its Enterprise Risk Management (ERM) framework across the Group, including regular stress testing, scenario planning, and dynamic risk assessments to address sector-specific vulnerabilities, particularly in areas like hydropower, which are exposed to climate volatility and geopolitical uncertainties. In parallel, DHI will pursue greater sectoral diversification, especially in green technologies such as solar and smart energy solutions.</p>
+<h4>5. Driving innovation and enabling digital transformation</h4>
+<p>The Group will embed a culture of innovation across its companies by encouraging investment in R&amp;D, incentivizing experimentation, and nurturing intrapreneurship. Digital transformation will be a core focus, particularly in finance, telecom, and energy, where blockchain, 5G, AI-driven optimization, and smart grids offer game-changing potential. Companies will be encouraged to reengineer their business models using digital identity systems, automation, and next-generation analytics.</p>
+<h4>6. Mainstreaming environmental, social and governance (ESG) commitments</h4>
+<p>In alignment with Bhutan’s philosophy of Gross National Happiness (GNH) and its sustainability commitments, DHI will adopt a Group-wide ESG framework. This will involve updating its Corporate Social Responsibility (CSR) guidelines and embedding ESG metrics into corporate evaluations, guiding subsidiaries toward environmentally sustainable practices, social inclusion, and stronger governance standards.</p>
+<h4>7. Deepening stakeholder engagement and transparency</h4>
+<p>Transparency and trust are foundational to DHI’s legitimacy as a public institution. The Group will institutionalize robust financial and operational reporting systems across all subsidiaries. Disclosures to the Government, regulators, and the public will be timely, accurate, and consistent. DHI will also prioritize two-way engagement with employees, citizens, policymakers, and private partners.</p>
+<p><i>DHI’s Portfolio Management Strategy is not simply about improving performance, it is about reimagining Bhutan’s economic core to meet the demands of the 21st century.</i></p>
+<h3>Milestones</h3>
+<div class="wrap"><table>
+<tr><th>Milestone</th><th>Timeframe</th></tr>
+<tr><td>Corporate Strategic Plans for all portfolio companies</td><td>Short-term</td></tr>
+<tr><td>Adopt industry-specific global KPIs</td><td>Immediate</td></tr>
+<tr><td>Business process reengineering, reviews, M&amp;A and divestment roadmaps</td><td>Immediate to short</td></tr>
+<tr><td>Regional and global growth, cross-border trade and alliances</td><td>Short-term</td></tr>
+<tr><td>Strengthen corporate governance</td><td>On-going</td></tr>
+<tr><td>Reimagine performance management and COMPACT</td><td>Immediate to short</td></tr>
+<tr><td>Unified ERM framework and resilience planning</td><td>On-going</td></tr>
+<tr><td>Establish ESG and M&amp;E Centres of Excellence</td><td>Short-term</td></tr>
+<tr><td>Stakeholder grievance mechanisms</td><td>Short-term</td></tr>
+<tr><td>Green transport system and centralized green procurement</td><td>Short to medium</td></tr>
+</table></div>
+<p style="font-size:.85rem;color:var(--mute);margin-top:10px">Timeframes: Immediate &lt; 1 yr · Short 1–3 yrs · Medium 3–6 yrs · Long &gt; 6 yrs.</p>
+</div></section>
+
+<section id="p2" class="p2"><div class="w">
+<h2>Pillar II: Investment Strategy</h2>
+<p class="lead">Channeling capital into engines of transformation for national growth and global relevance.</p>
+<p>To realise Bhutan’s 10X economic aspiration, DHI is implementing a focused, and future-facing Investment Strategy. Anchored in Bhutan’s comparative advantages, its natural capital, sovereign prerogatives, and geo-economic/political potential, this strategy targets high-growth, high-impact sectors of the future that can reshape the national economy, create jobs, and attract global partnerships. In parallel, DHI has established the BFF to safeguard resources for future generations and respond to national contingencies. DHI aims to grow the BFF to Nu. 30 billion over the next decade.</p>
+<p>In close collaboration with the Royal Government, the GMC initiative, private partners, and international allies, DHI will steer investments into five key sectors: Energy and Resources, Mines and Minerals, Infrastructure, Manufacturing and Services, and Global Securities.</p>
+<h3>Strategic objectives</h3>
+<ul>
+<li><b>Implement the DHI Triangulation Strategy:</b> develop a green energy portfolio in partnership with strategic global allies to power next-generation clean energy–intensive industries, such as AI data centers. It aligns three pillars: energy investment partners, industrial investment partners, and the combined role of DHI and the Royal Government in providing enabling policies, regulatory support, and catalytic capital.</li>
+<li>Establish long-term economic engines by prioritizing sectors with exponential potential: energy systems, critical mineral exploration, digital infrastructure, advanced low volume high value manufacturing, and wellness services.</li>
+<li>Mobilize global capital and expertise by developing commercially bankable projects and ensuring DHI serves as a credible gateway for global and local investors.</li>
+<li>De-risk the national economy through geographical and sectoral diversification.</li>
+<li>Strengthen sovereign investment capability by professionalizing asset management, developing structured financial products, and building internal capacity for global market engagement.</li>
+</ul>
+<h3>1. Energy and Resources</h3>
+<h4>Energy resources</h4>
+<p>Bhutan has a hydroelectric potential of estimated 36 GW and an installed capacity of 3.6 GW as of 2025. However, the firm power available is only around 700 MW, while the peak load is already beyond 1,000 MW and is expected to exceed 1,500 MW by 2025 end. Of the approximately 12,000 MU of energy generated in 2024, 50% is consumed domestically, with the remainder exported to India. However, Bhutan imports over 1,000 plus MU annually during the lean winter months. The energy system must address both the peak power demands at specific times and the base load energy requirements during the 6-month deficit period each year. Currently, this deficit is met through the day-ahead market and some long-term reimport strategies from India.</p>
+<p>Bhutan’s 2040 energy plan includes an additional 15 GW of hydroelectric power and 5 GW of solar power, necessitating an estimated investment of over 26 billion USD. Given climate change, hydropower risks, rising construction costs and the levelized cost of energy (LCOE), it is essential to implement a national energy security investment plan with a diversified generation portfolio. Beyond conventional hydro, the green portfolio approach integrates solar, geothermal (shallow, traditional and advanced), hydrogen and combined cycle, pumped storage, grid scale batteries and energy storage, exploration of natural hydrogen and small modular reactors (SMR) for base load as technology matures. Investments will also target smart grid and electricity market mechanisms across generation, transmission and distribution.</p>
+<p><b><i>Energy as an enabler through a triangulation strategy:</i></b> with rapid advances in material science, energy and storage technologies and quantum computing, accelerated by the AI revolution, a window exists to strategize for the demand of clean power-intensive industries (viz. AI data centres). The “triangulation framework” brings together (a) global energy investors, (b) global industrial partners (specifically AI data centre and hyper-scalers), and (c) Government, Private Sector and DHI. It would help build a robust domestic market ecosystem for energy, create the conditions for Power Purchase Agreements (PPAs), and enable new industry verticals.</p>
+<h4>Forest resources</h4>
+<p>With over 70% of Bhutan’s land under forest cover, the country is uniquely positioned to lead a timber innovation economy. DHI will build an integrated ecosystem for engineered timber production (e.g., Glulam, CLT), supporting GMC’s sustainable construction goals and creating high-value export potential. This includes design and production facilities, circular forestry systems, carbon markets (e.g., HFLD credits), and frontier R&amp;D in materials science and wood engineering, integrated with the flagship project of Nature Capital Accounting (NCA).</p>
+<h4>Water resources</h4>
+<p>Water is both a lifeline and an economic opportunity. DHI will study water as a strategic resource and industry with global partners, positioning Bhutan’s water as an economic driver beyond hydropower while ensuring long-term water security. Studies will explore water storage potential by developing natural catchment areas, and investment in safe drinking water, purification technologies, IoT-enabled water monitoring, fresh water monitoring and tokenization, and tourism and community initiatives like water parks, backed by a strong R&amp;D thrust.</p>
+<h3>2. Mines and Minerals</h3>
+<p>DHI will work closely with MoENR to unlock Bhutan’s untapped mineral potential sustainably and pursue commercialization. Using modern geological mapping, AI, drone technology, and international best practices, the focus is on exploring and adding value to magnesium, graphite, tungsten, lithium, copper, molybdenum, and rare earth elements. At present, SMCL mines coal, gypsum, and dolomite, and DHI is exploring ways to increase their value through processing and innovation. DHI plans to expand to both metallic and non-metallic minerals critical for emerging industries.</p>
+<p>This sector will be a major driver of 10X growth, contributing to economic diversification, foreign exchange stability, export competitiveness, and downstream industrial development. Strategic partnerships and sustainable, responsible mining practices will be essential for transparency and long-term national benefit.</p>
+<h3>3. Infrastructure: Physical, Digital, and Financial</h3>
+<h4>Physical infrastructure</h4>
+<p>As the government’s investment arm, DHI must strategically prioritize infrastructure that fosters technological advancement, business opportunity, and connectivity. With GMC positioned as a gateway between South and Southeast Asia via railways, airways, and other multimodal networks, seamless multimodal connectivity between GMC and Bhutan’s major cities is imperative. With the international airport at GMC and advanced discussions on connecting GMC and Samtse to Indian Railway systems, DHI will plan next-generation urban and inter-city infrastructure, including:</p>
+<ul><li>Advanced transportation (electric/hydrogen vehicles, underground transport, drone logistics, flying car testing, cable and ropeways);</li><li>Future smart cities (Phuentsholing township, special economic zones); and</li><li>HPC clusters powered by Bhutan’s clean energy, pursued through the triangulation strategy with GMC.</li></ul>
+<p>Through Drukair, DHI will explore key aviation support services at Gelephu International Airport: catering, ground handling, engineering and maintenance, and a certified Aircraft Maintenance, Repair and Overhaul (MRO) facility, transforming Gelephu into an integrated aerotropolis.</p>
+<h4>Digital infrastructure</h4>
+<p>DHI will expand the connectivity backbone through fiber expansion, last-mile Fiber To The Home (FTTH) rollout, and satellite-ground link integration with GovTech Agency. Bhutan’s national backbone runs on Optical Ground Wire (OPGW), with All-Dielectric Self-Supporting (ADSS) cable linking each of the 205 gewogs via India. GMC plans to expand dark fiber connectivity to subsea cables, and Starlink was introduced in 2024. The strategy includes supporting GMC connectivity, FTTH deployment, evolving wireless systems, and 5G and beyond to foster an IoT economy.</p>
+<h4>Financial infrastructure</h4>
+<p>The National Digital Identity (NDI) could be the backbone of financial infrastructure. DHI will expand Digital Public Infrastructure (DPI) through decentralized NDI systems built on Self Sovereign Identity principles, extending NDI use cases to government services, utilities, the corporate sector, single sign on, digital/cryptographic signatures, e-KYC and more.</p>
+<h3>4. Manufacturing and Services</h3>
+<h4>Manufacturing</h4>
+<p>Manufacturing has stagnated at about 7% of GDP since 2011, well below the 18% needed for high-income status. DHI will pursue a ‘low volume, high value’ strategy: design, engineering and manufacturing of efficient EV motors, humanoid robot components, and space industry technologies aligned with GovTech’s mission. The Group is investing in a geothermal spa, mass-engineered timber, energy-efficient charcoal and a magnesium production plant. Beyond cement and steel, DHI will explore logistics, EV assembly and manufacturing, battery and solar panel assembly, and the semiconductor industry, building a manufacturing and service strategy for a regional market of over 2 billion people.</p>
+<h4>Services</h4>
+<p>Tourism, health, education, logistics and aviation services hold significant potential. DHI will explore premium medical and wellness services; education-tech and transnational education campuses; and logistics and aviation services including catering, security, and airport management, leveraging Bhutan’s soft power, institutional trust, and natural environment.</p>
+<h3>5. Global Securities and Digital Assets</h3>
+<p><b>Global financial securities:</b> DHI will gradually expand exposure to global capital markets through managed portfolios of equities, fixed income, and thematic funds built via strategic partnerships, and expand assets under management.</p>
+<p><b>Digital assets:</b> DHI will maintain a balanced portfolio considering digital assets as a store of value and as opportunities in tokenomics, crypto currencies, CBDC, Blockchain and Web3. Tokenized infrastructure, programmable money, and decentralised applications will be monitored and selectively engaged through a sandbox model with regulators and global innovation partners.</p>
+<h3>Milestones for Investment Strategy</h3>
+<div class="wrap"><table>
+<tr><th>Milestone</th><th>Timeframe</th></tr>
+<tr><td colspan="2"><b>Energy and Resources</b></td></tr>
+<tr><td>15 GW Hydro Power and Transmission: 695 MW short, 2,358 MW medium, 13,524 MW long-term</td><td>Ongoing to long</td></tr>
+<tr><td>5 GW Solar: 675 MW short, 423 MW medium, 3,900 MW long-term</td><td>Ongoing to long</td></tr>
+<tr><td>Explore geothermal energy (traditional, advanced, shallow)</td><td>Short to medium</td></tr>
+<tr><td>Energy storage: grid scale batteries, sand, salt</td><td>Short to medium</td></tr>
+<tr><td>Explore hydrogen economy (energy, transport, ammonia, combined cycle)</td><td>Medium-term</td></tr>
+<tr><td>Explore large scale wind, SMR, natural hydrogen, natural gas</td><td>Long-term</td></tr>
+<tr><td>Mass Engineered Timber industry (e.g. TMTM and Superwood)</td><td>Short-term</td></tr>
+<tr><td>Industry and services on water and value addition</td><td>Medium-term</td></tr>
+<tr><td colspan="2"><b>Mines and Minerals</b></td></tr>
+<tr><td>Global partnerships and know-how; feasibility for rare earth and critical minerals</td><td>Long-term</td></tr>
+<tr><td>Magnesium production plant</td><td>Short-term</td></tr>
+<tr><td>Graphite mining and value addition feasibility</td><td>Short-term</td></tr>
+<tr><td colspan="2"><b>Infrastructure</b></td></tr>
+<tr><td>Phuentsholing Township Development Project (PTDP)</td><td>Immediate</td></tr>
+<tr><td>Digital infrastructure business: FTTH, international dark fiber</td><td>Short-term</td></tr>
+<tr><td>Airport development, expansion and business development</td><td>Medium-term</td></tr>
+<tr><td>Transportation system: tunnelling, flying cars, high speed rail, hydrogen transport</td><td>Long-term</td></tr>
+<tr><td>AI Data Centers with hyperscalers and developers</td><td>Long-term</td></tr>
+<tr><td>Financial infrastructure business: NextGen instruments</td><td>Short-term</td></tr>
+<tr><td colspan="2"><b>Manufacturing and Services</b></td></tr>
+<tr><td>Low Volume High Value (LVHV) manufacturing framework</td><td>Short to medium</td></tr>
+<tr><td>LVHV manufacturing/assembly of EVs, motors, IoT</td><td>Medium-term</td></tr>
+<tr><td>Semiconductor and electronics investment channels</td><td>Medium-term</td></tr>
+<tr><td>Services: health, education, hospitality, logistics</td><td>Medium to long</td></tr>
+<tr><td colspan="2"><b>Global Securities</b></td></tr>
+<tr><td>Scale Bhutan Future Fund to Nu. 30 Billion</td><td>Long-term</td></tr>
+<tr><td>Expand and diversify global portfolio including emerging markets</td><td>Immediate</td></tr>
+<tr><td>Fund management services for external clients</td><td>Medium to long</td></tr>
+<tr><td>Deploy new capital to grow the DHI portfolio</td><td>Ongoing</td></tr>
+</table></div>
+</div></section>
+
+<section id="p3" class="p3"><div class="w">
+<h2>Pillar III: Innovation Strategy</h2>
+<p class="lead">Building Bhutan’s next economic engine through science, technology and innovation.</p>
+<div class="grid">
+<div class="card"><h4>Drivers</h4><p>RGoB, GovTech, DHI InnoTech, TTPL: policy, technical support, proof-of-concept and MVP development.</p></div>
+<div class="card"><h4>Facilitators</h4><p>Jigme Namgyel Wangchuck Super Fab Lab (JNWSFL), built with MIT, evolving into a world-class R&amp;D Centre of Excellence.</p></div>
+<div class="card"><h4>Enablers</h4><p>The Multichannel Innovation Fund (MCIF) for pre-seed, seed and scale financing.</p></div>
+</div>
+<h3>Multichannel Innovation Fund</h3>
+<p>Aspiration: raise towards USD 100 million in 3–5 years, growing toward a billion-dollar fund. Inflows: venture capital, impact investments, self-funding, philanthropy.</p>
+<div class="chips"><span>Catalytic philanthropy</span><span>Mission-aligned impact investment</span><span>Venture launchpad</span><span>Growth capital</span></div>
+<p>National Digital Identity is cited as a living case: enabled through the MCIF, it became a launchpad for new start-ups and identity-linked fintech.</p>
+<h3>Focus areas</h3>
+<ul>
+<li>AI and blockchain: GPU computing centre, ANPR and smart city, agentic AI for humanoid robots, land tokenization prototype</li>
+<li>Drones: design, manufacturing and use cases (delivery, disaster management, power line maintenance)</li>
+<li>IoT and energy: smart agri-tech, SCADA, GLOF early warning, geothermal and hydrokinetic PoCs</li>
+<li>Nature Capital Accounting: national carbon registry and carbon financing</li>
+</ul>
+</div></section>
+
+<section id="enablers" class="en"><div class="w">
+<h2>Enabling Strategies</h2>
+<h3>Financing</h3>
+<p>Combine retained earnings with green and social bonds, project finance, syndicated loans and blended finance; explore Eurobonds, ECA-backed financing and selective subsidiary IPOs. Milestones include a treasury management system, sustainable dividend policy, a pilot blended-finance initiative and a global credit rating.</p>
+<h3>Technology</h3>
+<p>Three pillars: digital transformation of portfolio companies, shared platforms (data lakes, AI as a service, cybersecurity governance) and a Science and Technology Foresight Framework. Operational modernization includes RISE with SAP across the Group, led by the CTO Office.</p>
+<h3>Human Capital</h3>
+<p>Talent management, leadership development, human-centric workplaces and organizational learning. Milestones: Culture Hack programme, competency framework, performance and recognition framework, 21st Century Learning Hub, succession planning.</p>
+</div></section>
+
+<section id="coe"><div class="w">
+<h2>Centres of Excellence</h2>
+<div class="grid">
+<div class="card"><h4>Project Management</h4><p>National benchmark for project delivery: PMBOK, PRINCE2, Agile, SAFe, training and certification.</p></div>
+<div class="card"><h4>ESG</h4><p>ESG metrics, disclosure standards and sector frameworks rooted in GNH.</p></div>
+<div class="card"><h4>Monitoring &amp; Evaluation</h4><p>Group-wide M&amp;E framework and indicators; internal audit of strategy delivery.</p></div>
+<div class="card"><h4>Research &amp; Development</h4><p>Links fundamental and applied research to national industrialization; IP, academic partnerships, deep-tech spinouts.</p></div>
+</div>
+</div></section>
+
+<section id="reforms"><div class="w">
+<h2>Institutional Reforms</h2>
+<div class="grid">
+<div class="card"><h4>COO</h4><p>Portfolio management services and operational governance.</p></div>
+<div class="card"><h4>CIO</h4><p>Investment management: capital allocation and pipelines.</p></div>
+<div class="card"><h4>CFO</h4><p>Financial management and group fiscal health.</p></div>
+</div>
+<p>An Executive Management Committee chaired by the CEO works as a matrixed, collegial team. The <b>Y-Career Model</b> lets senior professionals choose a Managerial or Specialist (Technical) track.</p>
+</div></section>
+
+<section id="risk"><div class="w">
+<h2>Risks &amp; Key Challenges</h2>
+<div class="chips"><span>Financial and market</span><span>Geopolitical and regulatory</span><span>Technological</span><span>Environmental and climate</span><span>Reputational and social</span><span>Organizational and talent</span></div>
+<p>Risk management centres on a strengthened ERM framework: group-wide risk register, scenario modelling and stress testing, early warning indicators, and Board and Audit Committee oversight.</p>
+<h3>Key challenges</h3>
+<ul>
+<li><b>Hydropower overdependence:</b> financing barriers, approval delays, climate variability, rising domestic consumption.</li>
+<li><b>Fragile mining sector:</b> permit suspensions, poor connectivity, shrinking domestic demand.</li>
+<li><b>Nascent innovation ecosystem:</b> limited R&amp;D funding and no pathway from research to product.</li>
+<li><b>Human capital deficits:</b> high attrition 2021–2023 and scarce AI, fintech and blockchain skills.</li>
+<li><b>Global uncertainty</b> and technological disruption.</li>
+</ul>
+</div></section>
+
+<section id="2035"><div class="w">
+<h2>The DHI Group in 2035</h2>
+<p class="lead">A high-income, innovation-driven Bhutan.</p>
+<div class="stats">
+<div class="stat"><b>Nu. 700 bn</b><span>Diversified revenue base</span></div>
+<div class="stat"><b>Nu. 3.5 tn</b><span>Assets stewarded</span></div>
+<div class="stat"><b>Nu. 30 bn</b><span>Bhutan Future Fund</span></div>
+</div>
+<ul>
+<li>DHI recognized for portfolio excellence, innovation leadership, investment capability and institutional integrity.</li>
+<li>Subsidiaries efficient, competitive and digitally empowered; several publicly listed.</li>
+<li>A thriving start-up ecosystem, with the MCIF on the path to a billion-dollar fund.</li>
+<li>A deep, diversified capital ecosystem and a national science and technology strategy.</li>
+</ul>
+<blockquote>The future is not something we inherit. It is something we build. Together.</blockquote>
+<h3>Portfolio companies</h3>
+<div class="chips"><span>Druk Green Power</span><span>Bhutan Power</span><span>State Mining</span><span>NRDCL</span><span>Bhutan Telecom</span><span>Drukair</span><span>Bhutan NDI</span><span>DHI Pte.</span><span>CDCL</span><span>Thimphu TechPark</span><span>Druk Metallurgy</span><span>Bhutan Ferro Alloys</span><span>Penden Cement</span><span>Menjong Sorig</span><span>Crawfish Himalayan</span><span>Azista Bhutan</span><span>Koufuku</span><span>Dungsam Cement</span><span>Dungsam Polymers</span><span>Bhutan Board Products</span><span>State Trading Corp.</span><span>Druk Holding India</span><span>Bank of Bhutan</span><span>Bhutan National Bank</span><span>Royal Insurance</span></div>
+</div></section>
+
+<footer>Condensed web edition of the “10X Journey – DHI Group Roadmap”. © Druk Holding and Investments Limited. See the original publication for full text.</footer>
+
+<script>
+(function(){
+var links=[].slice.call(document.querySelectorAll('#nav a'));
+var secs=links.map(function(a){return document.querySelector(a.getAttribute('href'))});
+function spy(){var y=window.scrollY+120,i=0;secs.forEach(function(s,n){if(s&&s.offsetTop<=y)i=n});links.forEach(function(a,n){a.classList.toggle('on',n===i)})}
+window.addEventListener('scroll',spy,{passive:true});spy();
+})();
+</script>
+</body>
+</html>
